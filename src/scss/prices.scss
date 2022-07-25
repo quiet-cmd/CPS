@@ -1,0 +1,111 @@
+.prices {
+    &__price {
+        box-sizing: border-box;
+        position: relative;
+        padding: 0px 16px 20px 16px;
+        border-radius: 6px;
+        min-width: 260px;
+        max-width: 320px;
+        height: 230px;
+        flex-grow: 1;
+
+        .prices__title {
+            color: $subColor;
+            margin: 16px 0px 4px 0px;
+        }
+
+        .prices__bottom-group {
+            display: flex;
+            align-items: center;
+            
+            .prices__order {
+                width: 120px;
+                height: 32px;
+                background: url("../img/order.svg") no-repeat;
+                margin-left: auto;
+            }
+        }
+    }
+
+    &__description {
+        margin: 16px 0px 16px 0px;
+        width: 288px;
+    }
+    
+    &__oferta {
+        position: relative;
+    }
+    
+    &__oferta::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: url('../img/more.svg') no-repeat;
+        bottom: 3px;
+    }
+
+    @media (max-width: $screen-tablet) {
+        .prices__header {
+            display: none;
+        } 
+    }
+
+    @media (min-width: $screen-tablet) {
+        &__container {
+            display: table;
+
+            .prices__header {
+                display: table-row;
+                height: 60px;
+                box-sizing: border-box;
+                padding: 0px 0px 0px 0px;
+                background-color: $background-color--main;
+
+                .prices__title {
+                    display: table-cell;
+                    padding: 24px 16px 24px 16px;
+                    color: $subColor;
+                }
+            }
+
+            .prices__price {
+                display: table-row;
+                height: 60px;
+                box-sizing: border-box;
+                padding: 0px 0px 0px 0px;
+
+                .prices__title {
+                    display: none;
+                }
+                
+
+                & > .prices__subtitle {
+                    display: table-cell;
+                    border-bottom: 1px solid $borderColor;
+                    padding: 24px 16px 24px 16px;
+                }
+
+                .prices__bottom-group {
+                    border-bottom: 1px solid $borderColor;
+                    padding: 24px 16px 24px 16px;
+
+                    .prices__order {
+                        margin-right: 5px;
+                        display: table-cell;
+                    }
+                    .prices__subtitle {
+                        display: table-cell;
+                    }
+                }
+
+            }
+        }
+
+        &__description {
+            height: 60px;
+            width: 421px;
+        }
+	}
+    
+}

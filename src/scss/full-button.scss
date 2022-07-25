@@ -1,0 +1,20 @@
+.full-button {
+    display: flex;
+    align-items: center;
+	font-size: 16px;
+	font-weight: bold;
+	background-color: transparent;
+
+	&::before {
+		content: "";
+		margin-right: 16px;
+		min-width: 24px;
+		min-height: 24px;
+		background: url("../img/expand.svg") no-repeat;
+		transform: rotate(0deg);
+	}
+	
+	&:not(.full-button--active)::before {
+		transform: rotate(180deg);
+	}
+}

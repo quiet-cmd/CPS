@@ -1,0 +1,46 @@
+.swiper-slide {
+    box-sizing: border-box;
+    background: $background-color--body;
+    border: 1px solid $borderColor;
+    border-radius: 6px;
+    padding: 16px;
+
+    box-shadow: 0 1px 2px rgba($color: $subColor, $alpha: 0.05);
+    transition: opacity 0.3s ease-in-out;
+} 
+
+
+
+.swiper-slide:focus,
+.swiper-slide:hover {
+    box-shadow: 0 5px 15px rgba($color: $active-color, $alpha: 0.6);
+    transition: all 0.3s ease-in-out;
+}
+
+
+.swiper {
+    
+    &-pagination {
+        margin-top: 16px;
+        display: flex;
+        justify-content: center;
+
+        &-bullet {
+            height: 12px;
+            width: 12px;
+            background: $bullet-color;
+            border-radius: 50%;
+            margin: 0 6px;
+
+            &-active {
+                background: $bullet-color-active;
+            }
+        }
+    }
+
+    @media (min-width: $screen-tablet)   {
+		&-pagination {
+			display: none;
+		}
+	}
+  }

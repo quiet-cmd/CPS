@@ -1,0 +1,15 @@
+.content {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: $screen-desktop;
+    margin: auto;
+    position: relative;
+    padding: 0px 32px 0px 32px;
+    background-color: $background-color--main;
+
+    @media (min-width: 1366px) {
+        margin-left: 320px;
+    }
+}

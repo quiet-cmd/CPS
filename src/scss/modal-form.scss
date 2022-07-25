@@ -1,0 +1,111 @@
+.modal-form {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba($color: $background-color--body, $alpha: 0.8);
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+    
+
+    .modal-form__btn {
+        margin: 24px 0px 40px 16px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .modal-form__container {
+        position: fixed;
+        right: 0;
+        top: 0;
+        background-color: $background-color--body;
+        box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+
+        width: 320px;
+        height: 100vh;
+        padding: 0px 16px 0px 16px;
+
+
+        .modal-form__title::before {
+            position: absolute;
+            content: "";
+            width: 50px;
+            height: 50px;
+            background: url("../img/highlight.png") no-repeat 0px 0px;
+            margin-left: -16px;
+        }
+
+        .modal-form__input {
+            box-sizing: border-box;
+            margin-top: 16px;
+            padding: 12px 16px;
+            width: 100%;
+            height: 48px;
+            background: $background-color--body;
+            border: 1px solid $borderColor;
+            border-radius: 8px;
+        }
+
+        .modal-form__warning {
+            margin-top: 16px;
+            color: $subColor;
+
+            .modal-form__link {
+                color: $form-color;
+            }
+        }
+
+        .modal-form__button {
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            height: 32px;
+            width: 136px;
+            padding: 4px 16px;
+            background-color: $background-color--submit;
+            border-radius: 16px;
+            margin: 16px;
+            align-self: flex-end;
+            
+
+            .modal-form__text {
+                font-size: 12px;
+                text-transform: uppercase;
+                color: $background-color--body;
+            }
+
+            .modal-form__text::after {
+                content: "";
+                width: 14px;
+                height: 14px;
+                position: absolute;
+                background: url("../img/dropdown.svg") no-repeat;
+                margin-left: 12px;
+            }
+        }
+    }
+}
+
+@media (min-width: $screen-desktop) {
+    .modal-form {
+        box-shadow: none;
+
+        .modal-form__container {
+            width: 440px;
+            padding: 0px 32px 0px 32px;
+
+            .modal-form__btn {
+                position: absolute;
+                right: 470px;
+            }
+
+            .modal-form__title::before {
+                margin-left: -32px;
+            }
+            
+        }
+    }
+}

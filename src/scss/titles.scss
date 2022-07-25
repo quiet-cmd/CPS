@@ -1,0 +1,83 @@
+.titles {
+    &__container {
+        margin-top: 104px;
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        overflow-x: auto;
+        margin-top: 24px;
+        padding: 2px 0px 0px 2px;
+    }
+    &__title::before {
+        position: absolute;
+        content: "";
+        width: 50px;
+        height: 50px;
+        background: url("../img/highlight.png") no-repeat 0px 0px;
+        margin-left: -32px;
+    }
+
+    &__item {
+        padding: 8px;
+        white-space: nowrap;
+        font-size: 16px;
+        color: $subColor;
+        margin: 0px 24px 24px 0px;
+        transition: transform 0.5s ease;
+    }
+    &__item:hover,
+    &__item:focus {
+        transform: scale(0.9);
+    }
+
+    
+    &__item--active {
+        border-radius: 6px;
+        background-color: $background-color--body;
+        box-shadow: 0px 0px 0px 2px $active-color;
+    }
+
+    @media (max-width: $screen-desktop) {
+        &__device--deck {
+            display: none;
+        }
+    }
+
+    @media (min-width: $screen-desktop) {
+        &__container {
+            margin-top: 0px;
+        }
+
+        &__top-part {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-items: center;
+
+            .titles__action-group {
+                display: flex;
+                margin-left: auto;
+        
+                .titles__action {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 60px;
+                    
+                    .titles__repair,
+                    .titles__checkstatus {
+                        margin-left: 16px;	
+                    }
+                }
+            }
+        }
+        
+        &__menu {
+            overflow-x: hidden;
+            flex-wrap: wrap;
+        }
+    }
+
+}

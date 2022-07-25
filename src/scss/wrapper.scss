@@ -1,0 +1,15 @@
+.wrapper {
+    position: relative;
+    min-height: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    background-color: $background-color--body;
+    
+    @media (min-width: 1366px) {
+        max-width: 1440px;
+    }
+}

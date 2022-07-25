@@ -1,0 +1,82 @@
+.brands {
+	&__container {
+		margin-top: 32px;
+		margin-bottom: 24px;
+
+		.brands__brand {
+			width: 240px;
+			max-width: 280px;
+			min-height: 72px;
+			max-height: 72px;
+			display: flex;
+			align-items: center;
+
+			.brands__logo {
+				margin-right: auto;
+			}
+		}
+		
+	}
+
+	&-btn {
+		margin: 16px 0px;
+	}
+	
+	&-btn::after {
+		content: 'Показать все';
+	}
+	
+	&-btn:not(.full-button--active)::after {
+		content: 'Скрыть';
+	}
+	
+	@media (max-width: $screen-tablet) {
+		&-btn {
+			display: none;
+		}
+	}
+
+	@media (min-width: $screen-tablet) and (max-width: $screen-desktop)   {
+		&__container {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+
+			.brands__brand {
+				flex-basis: calc(100% / 3 - 20px);
+				margin-right: 24px;
+				margin-bottom: 16px;
+			}
+
+			.brands__brand:nth-child(3n) {
+				margin-right: 0px;
+			}
+		
+			.brands__device--tablet ~ .brands__brand {
+				display: none;
+			}
+		}
+	}
+
+	@media (min-width: $screen-desktop) {
+		&__container {
+			flex-direction: row;
+			flex-wrap: wrap;
+
+			.brands__brand {
+				flex-basis: calc(100% / 4 - 40px);
+				margin-right: 30px;
+				margin-bottom: 16px;
+			}
+
+			.brands__brand:nth-child(4n) {
+				margin-right: 0px;
+			}
+		
+			.brands__device--deck ~ .brands__brand {
+				display: none;
+			}
+		}
+	}
+
+}

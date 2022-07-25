@@ -1,0 +1,22 @@
+.footer__container {
+    margin-top: 60px;
+
+    .footer__text {
+        display: block;
+        margin: 16px 0px 16px 0px;
+        font-size: 14px;
+        color: $subColor;
+    }
+
+    @media (min-width: $screen-tablet) {
+		& {
+            display: flex;
+        }
+
+        .footer__text {
+            flex-basis: 218px;
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+	}
+}
