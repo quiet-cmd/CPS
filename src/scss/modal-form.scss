@@ -6,6 +6,7 @@
     z-index: 2;
     visibility: hidden;
     opacity: 0;
+    transition: opacity 0.5s ease;
     
 
     .modal-form__btn {

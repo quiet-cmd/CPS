@@ -4,11 +4,12 @@
     width: 100%;
     background-color: rgba($color: $background-color--body, $alpha: 0.8);
     z-index: 2;
-    visibility: hidden;
     opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.5s ease;
 
     .modal-menu__container {
-        position: fixed;
+        position: static;
         height: 100%;
         width: 320px;
         box-sizing: border-box;
