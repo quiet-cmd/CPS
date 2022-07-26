@@ -19,6 +19,14 @@
 		.about-btn {
 			margin: 16px 0px 16px 0px;
 		}
+		
+		.about-btn::after {
+			content: 'Читать далее';
+		}
+		
+		.about-btn:not(.full-button--active)::after {
+			content: 'Скрыть';
+		}
 
 		@media (max-width: $screen-tablet) {
 			.about__device--tablet,
