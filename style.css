@@ -231,23 +231,17 @@ p {
   line-height: 20px;
   margin: 0px 0px 0px 0px; }
 
-h2 {
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -0.2px;
-  text-transform: uppercase;
-  color: #7E7E82;
-  padding: 25px 0px 0px 0px;
-  width: 100%;
-  height: 56px;
-  background: linear-gradient(270deg, #fff 1.39%, #F8F8F8 98.61%); }
-
 button {
   background-color: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
   margin: 0; }
+
+ul, li {
+  text-decoration: none;
+  list-style: none;
+  margin: 0px; }
 
 .wrapper {
   position: relative;
@@ -292,6 +286,41 @@ button {
     transform: rotate(0deg); }
   .full-button:not(.full-button--active)::before {
     transform: rotate(180deg); }
+
+.button {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  height: 32px;
+  width: 136px;
+  padding: 4px 16px;
+  background-color: #FF3E79;
+  border-radius: 16px; }
+  .button__text {
+    position: relative;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+    top: 1px; }
+  .button__text::after {
+    content: "";
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    background: url(./static/dropdown.svg) no-repeat;
+    margin-left: 12px;
+    top: 1px; }
+
+.gradient-title {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  color: #7E7E82;
+  padding: 25px 0px 0px 0px;
+  width: 100%;
+  height: 56px;
+  background: linear-gradient(270deg, #fff 1.39%, #F8F8F8 98.61%); }
 
 .ico-repair,
 .ico-checkstatus,
@@ -458,13 +487,16 @@ button {
     width: 320px;
     height: 100vh;
     padding: 0px 16px 0px 16px; }
+    .modal-form .modal-form__container .modal-form__title {
+      position: relative; }
     .modal-form .modal-form__container .modal-form__title::before {
       position: absolute;
       content: "";
       width: 50px;
       height: 50px;
       background: url(./static/highlight.png) no-repeat 0px 0px;
-      margin-left: -16px; }
+      margin-left: -16px;
+      top: -6px; }
     .modal-form .modal-form__container .modal-form__input {
       box-sizing: border-box;
       margin-top: 16px;
@@ -474,33 +506,14 @@ button {
       background: #fff;
       border: 1px solid #EAEAEA;
       border-radius: 8px; }
+    .modal-form .modal-form__container .modal-form__button {
+      margin-left: auto;
+      margin-top: 16px; }
     .modal-form .modal-form__container .modal-form__warning {
       margin-top: 16px;
       color: #7E7E82; }
       .modal-form .modal-form__container .modal-form__warning .modal-form__link {
         color: #FF3E79; }
-    .modal-form .modal-form__container .modal-form__button {
-      box-sizing: border-box;
-      display: flex;
-      align-items: center;
-      height: 32px;
-      width: 136px;
-      padding: 4px 16px;
-      background-color: #FF3E79;
-      border-radius: 16px;
-      margin: 16px;
-      align-self: flex-end; }
-      .modal-form .modal-form__container .modal-form__button .modal-form__text {
-        font-size: 12px;
-        text-transform: uppercase;
-        color: #fff; }
-      .modal-form .modal-form__container .modal-form__button .modal-form__text::after {
-        content: "";
-        width: 14px;
-        height: 14px;
-        position: absolute;
-        background: url(./static/dropdown.svg) no-repeat;
-        margin-left: 12px; }
 
 @media (min-width: 1120px) {
   .modal-form {
@@ -613,13 +626,22 @@ button {
     .titles__top-part .titles__action-group {
       display: flex;
       margin-left: auto; }
-      .titles__top-part .titles__action-group .titles__action {
+      .titles__top-part .titles__action-group .titles__repair,
+      .titles__top-part .titles__action-group .titles__checkstatus {
         display: flex;
         align-items: center;
         margin-right: 60px; }
-        .titles__top-part .titles__action-group .titles__action .titles__repair,
-        .titles__top-part .titles__action-group .titles__action .titles__checkstatus {
-          margin-left: 16px; }
+      .titles__top-part .titles__action-group .titles__repair::after,
+      .titles__top-part .titles__action-group .titles__checkstatus::after {
+        content: "";
+        display: block;
+        min-width: 40px;
+        min-height: 40px;
+        margin-left: 16px; }
+      .titles__top-part .titles__action-group .titles__repair::after {
+        background: url(./static/repair.svg) no-repeat; }
+      .titles__top-part .titles__action-group .titles__checkstatus::after {
+        background: url(./static/checkstatus.svg) no-repeat; }
   .titles__menu {
     overflow-x: hidden;
     flex-wrap: wrap; } }
@@ -787,9 +809,8 @@ button {
   position: relative;
   padding: 0px 16px 20px 16px;
   border-radius: 6px;
-  min-width: 260px;
-  max-width: 320px;
-  height: 230px;
+  width: 300px;
+  height: 250px;
   flex-grow: 1; }
   .prices__price .prices__title {
     color: #7E7E82;
@@ -798,9 +819,6 @@ button {
     display: flex;
     align-items: center; }
     .prices__price .prices__bottom-group .prices__order {
-      width: 120px;
-      height: 32px;
-      background: url(./static/order.svg) no-repeat;
       margin-left: auto; }
 
 .prices__description {

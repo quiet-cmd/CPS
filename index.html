@@ -9,7 +9,7 @@
 
 	<div class="wrapper">
 
-		<section id="modal-menu" class="modal-menu">
+		<aside id="modal-menu" class="modal-menu">
 			<div class="modal-menu__container">
 				<div class="modal-menu__top">
 					<button type="button" arial-label="side-bar-btn" class="modal-menu__btn ico-an">
@@ -53,44 +53,44 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</aside>
 
-		<div id="modal-feedback" class="modal-form">	
+		<aside id="modal-feedback" class="modal-form">	
 			<form class="modal-form__container" action="" method="post">
 				<button type="button" arial-label="close-menu" class="modal-form__btn ico-an">
 					<span class="modal-form__background-btn ico-burger-active"></span>
 				</button>
-				<h1 class="modal-form__title">Обратная связь</h1>
-				<input type="text" placeholder="Имя" class="modal-form__input">
-				<input type="tel" placeholder="Телефон" class="modal-form__input">
-				<input type="email" placeholder="Электронная почта" class="modal-form__input">
-				<textarea placeholder="Сообщение" class="modal-form__input"></textarea>
-				<p class="modal-form__warning">
+				<h2 class="modal-form__title">Обратная связь</h2>
+				<input type="text" placeholder="Имя" class="modal-form__input" required>
+				<input type="tel" placeholder="Телефон" class="modal-form__input" required>
+				<input type="email" placeholder="Электронная почта" class="modal-form__input" required>
+				<textarea placeholder="Сообщение" class="modal-form__input" required></textarea>
+				<legend class="modal-form__warning">
 					Нажимая “отправить”, вы даете согласие на <a class="modal-form__link"> обработку персональных данных</a>
 					и соглашаетесь с нашей <a class="modal-form__link"> политикой конфиденциальности</a>
-				</p>
-				<button type="submit" class="modal-form__button">
-					<span class="modal-form__text">отправить</span>
+				</legend>
+				<button type="submit" class="modal-form__button button">
+					<span class="button__text">отправить</span>
 				</button>
 			</form>
-		</div>
+		</aside>
 
-		<div id="modal-call" class="modal-form">	
+		<aside id="modal-call" class="modal-form">	
 			<form class="modal-form__container" action="" method="post">
 				<button type="button" arial-label="close-menu" class="modal-form__btn ico-an">
 					<span class="modal-form__background-btn ico-burger-active"></span>
 				</button>
-				<h1 class="modal-form__title">Заказать звонок</h1>
-				<input type="tel" placeholder="Телефон" class="modal-form__input">
-				<p class="modal-form__warning">
+				<h2 class="modal-form__title">Заказать звонок</h2>
+				<input type="tel" placeholder="Телефон" class="modal-form__input" required>
+				<legend class="modal-form__warning">
 					Нажимая “отправить”, вы даете согласие на <a class="modal-form__link"> обработку персональных данных</a>
 					и соглашаетесь с нашей <a class="modal-form__link"> политикой конфиденциальности</a>
-				</p>
-				<button type="submit" class="modal-form__button">
-					<span class="modal-form__text">отправить</span>
+				</legend>
+				<button type="submit" class="modal-form__button button">
+					<span class="button__text">отправить</span>
 				</button>
 			</form>
-		</div>
+		</aside>
 
 		<main class="content">
 
@@ -112,8 +112,8 @@
 						<div class="titles__top-part">
 							<h1 class="titles__title">Услуги и сервисы</h1>
 							<div class="titles__action-group titles__device--deck">
-								<a href="" class="titles__action">Оставить заявку<span class="titles__repair ico-repair ico-an"></span></a>
-								<a href="" class="titles__action">Статус ремонта<span class="titles__checkstatus ico-checkstatus ico-an"></span></a>
+								<a href="" class="titles__repair">Оставить заявку</a>
+								<a href="" class="titles__checkstatus">Статус ремонта</a>
 							</div>
 						</div>
 						<nav class="titles__menu">
@@ -152,7 +152,7 @@
 
 		
 			<div class="brands" data-mobaile="false">
-				<h2 class="brands__title">Ремонт техники различных брендов</h2>
+				<h2 class="brands__title gradient-title">Ремонт техники различных брендов</h2>
 				<div class="brands__container swiper-wrapper">
 					<a href="" class="brands__brand swiper-slide">
 						<img src="./img/company/lenovo.svg" alt="lenovo-logo" class="brands__logo">
@@ -216,7 +216,7 @@
 
 
 			<div class="services" data-mobaile="false">
-				<h2 class="services__title">Ремонт различных видов техники</h2>
+				<h2 class="services__title gradient-title">Ремонт различных видов техники</h2>
 				<div class="services__container swiper-wrapper">
 					<a href="" class="services__service swiper-slide">
 						<span class="services__text">Ремонт ноутбуков</span>
@@ -250,78 +250,87 @@
 						<span class="services__text">Ремонт ноутбуков</span>
 						<span href="" class="services__btn-service ico-go"></span>
 					</a>
-			
 				</div>
 				<button class="services-btn full-button full-button--active" type="button"></button>
 				<div class="swiper-pagination"></div>
 			</div>
 
 			<div class="prices" data-mobaile="false">
-				<h2 class="prices__main-title">цены на услуги</h2>
+				<h2 class="prices__main-title gradient-title">цены на услуги</h2>
 
 				<div class="prices__container swiper-wrapper">
 
-					<div href="" class="prices__header swiper-slide">
-						<p class="prices__title">Ремонтные услуги</p>
-						<p class="prices__title">Цена</p>
-						<p class="prices__title">Срок</p>
-					</div>
+					<ul class="prices__header swiper-slide">
+						<li class="prices__title">Ремонтные услуги</li>
+						<li class="prices__title">Цена</li>
+						<li class="prices__title">Срок</li>
+					</ul>
 
-					<div href="" class="prices__price swiper-slide">
-						<p class="prices__title">Ремонтные услуги</p>
-						<p class="prices__subtitle">Диагностика</p>
-						<p class="prices__title">Цена</p>
-						<p class="prices__subtitle">Бесплатно</p>
-						<p class="prices__title">Срок</p>
-						<div class="prices__bottom-group">
-							<p class="prices__subtitle">30 мин</p>
-							<a href="" class="prices__order"></a>
-						</div>
-					</div>
-					<div href="" class="prices__price swiper-slide">
-						<p class="prices__title">Ремонтные услуги</p>
-						<p class="prices__subtitle">Замена дисплея</p>
-						<p class="prices__title">Цена</p>
-						<p class="prices__subtitle">1 000 ₽</p>
-						<p class="prices__title">Срок</p>
-						<div class="prices__bottom-group">
-							<p class="prices__subtitle">30-120 мин</p>
-							<a href="" class="prices__order"></a>
-						</div>
-					</div>
-					<div href="" class="prices__price swiper-slide">
-						<p class="prices__title">Ремонтные услуги</p>
-						<p class="prices__subtitle">Замена полифонического динамика</p>
-						<p class="prices__title">Цена</p>
-						<p class="prices__subtitle">1 000 ₽</p>
-						<p class="prices__title">Срок</p>
-						<div class="prices__bottom-group">
-							<p class="prices__subtitle">30-120 мин</p>
-							<a href="" class="prices__order"></a>
-						</div>
-					</div>
-					<div href="" class="prices__price swiper-slide">
-						<p class="prices__title">Ремонтные услуги</p>
-						<p class="prices__subtitle">Тестирование с выдачей технического заключения</p>
-						<p class="prices__title">Цена</p>
-						<p class="prices__subtitle">1 000 ₽</p>
-						<p class="prices__title">Срок</p>
-						<div class="prices__bottom-group">
-							<p class="prices__subtitle">30-120 мин</p>
-							<a href="" class="prices__order"></a>
-						</div>
-					</div>
-					<div class="prices__price swiper-slide">
-						<p class="prices__title">Ремонтные услуги</p>
-						<p class="prices__subtitle">Замена программного обеспечения</p>
-						<p class="prices__title">Цена</p>
-						<p class="prices__subtitle">1 000 ₽</p>
-						<p class="prices__title">Срок</p>
-						<div class="prices__bottom-group">
-							<p class="prices__subtitle">30-120 мин</p>
-							<a href="" class="prices__order"></a>
-						</div>
-					</div>
+					<ul class="prices__price swiper-slide">
+						<li class="prices__title">Ремонтные услуги</li>
+						<li class="prices__subtitle">Диагностика</li>
+						<li class="prices__title">Цена</li>
+						<li class="prices__subtitle">Бесплатно</li>
+						<li class="prices__title">Срок</li>
+						<li class="prices__bottom-group">
+							<span class="prices__subtitle">30 мин</span>
+							<button type="button" class="prices__order button">
+								<span class="button__text">отправить</span>
+							</button>
+						</li>
+					</ul>
+					<ul class="prices__price swiper-slide">
+						<li class="prices__title">Ремонтные услуги</li>
+						<li class="prices__subtitle">Замена дисплея</li>
+						<li class="prices__title">Цена</li>
+						<li class="prices__subtitle">1 000 ₽</li>
+						<li class="prices__title">Срок</li>
+						<li class="prices__bottom-group">
+							<span class="prices__subtitle">30 мин</span>
+							<button type="button" class="prices__order button">
+								<span class="button__text">отправить</span>
+							</button>
+						</li>
+					</ul>
+					<ul class="prices__price swiper-slide">
+						<li class="prices__title">Ремонтные услуги</li>
+						<li class="prices__subtitle">Замена полифонического динамика</li>
+						<li class="prices__title">Цена</li>
+						<li class="prices__subtitle">1 000 ₽</li>
+						<li class="prices__title">Срок</li>
+						<li class="prices__bottom-group">
+							<span class="prices__subtitle">30 мин</span>
+							<button type="button" class="prices__order button">
+								<span class="button__text">отправить</span>
+							</button>
+						</li>
+					</ul>
+					<ul class="prices__price swiper-slide">
+						<li class="prices__title">Ремонтные услуги</li>
+						<li class="prices__subtitle">Тестирование с выдачей технического заключения</li>
+						<li class="prices__title">Цена</li>
+						<li class="prices__subtitle">1 000 ₽</li>
+						<li class="prices__title">Срок</li>
+						<li class="prices__bottom-group">
+							<span class="prices__subtitle">30 мин</span>
+							<button type="button" class="prices__order button">
+								<span class="button__text">отправить</span>
+							</button>
+						</li>
+					</ul>
+					<ul class="prices__price swiper-slide">
+						<li class="prices__title">Ремонтные услуги</li>
+						<li class="prices__subtitle">Замена программного обеспечения</li>
+						<li class="prices__title">Цена</li>
+						<li class="prices__subtitle">1 000 ₽</li>
+						<li class="prices__title">Срок</li>
+						<li class="prices__bottom-group">
+							<span class="prices__subtitle">30 мин</span>
+							<button type="button" class="prices__order button">
+								<span class="button__text">отправить</span>
+							</button>
+						</li>
+					</ul>
 				</div>
 
 				<div class="swiper-pagination"></div>
@@ -333,9 +342,9 @@
 
 			<footer class="footer">
 				<div class="footer__container">
-					<a href="" class="footer__text">© 2019 CPS<br>Разработано командой Apesong </a>
-					<a href="" class="footer__text">Политика конфиденциальности</a>
-					<a href="" class="footer__text">Информация, размещенная на данной странице, не является публичной офертой</a>
+					<p href="" class="footer__text">© 2019 CPS<br>Разработано командой Apesong </p>
+					<p href="" class="footer__text">Политика конфиденциальности</p>
+					<p href="" class="footer__text">Информация, размещенная на данной странице, не является публичной офертой</p>
 				</div>
 	
 			</footer>
