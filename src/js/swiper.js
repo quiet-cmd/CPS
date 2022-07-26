@@ -80,9 +80,8 @@ function PricesSwiper() {
 				400: {
 					slidesPerView: 1.3
 				},
-
-				500: {
-					slidesPerView: 2.4
+				540: {
+					slidesPerView: 1.5
 				}
 			},
 		});
