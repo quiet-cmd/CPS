@@ -29,6 +29,9 @@
         height: 100vh;
         padding: 0px 16px 0px 16px;
 
+        .modal-form__title {
+            position: relative;
+        }
 
         .modal-form__title::before {
             position: absolute;
@@ -37,7 +40,9 @@
             height: 50px;
             background: url("../img/highlight.png") no-repeat 0px 0px;
             margin-left: -16px;
+            top: -6px;
         }
+
 
         .modal-form__input {
             box-sizing: border-box;
@@ -50,41 +55,17 @@
             border-radius: 8px;
         }
 
+        .modal-form__button {
+            margin-left: auto;
+            margin-top: 16px;
+        }
+
         .modal-form__warning {
             margin-top: 16px;
             color: $subColor;
 
             .modal-form__link {
                 color: $form-color;
-            }
-        }
-
-        .modal-form__button {
-            box-sizing: border-box;
-            display: flex;
-            align-items: center;
-            height: 32px;
-            width: 136px;
-            padding: 4px 16px;
-            background-color: $background-color--submit;
-            border-radius: 16px;
-            margin: 16px;
-            align-self: flex-end;
-            
-
-            .modal-form__text {
-                font-size: 12px;
-                text-transform: uppercase;
-                color: $background-color--body;
-            }
-
-            .modal-form__text::after {
-                content: "";
-                width: 14px;
-                height: 14px;
-                position: absolute;
-                background: url("../img/dropdown.svg") no-repeat;
-                margin-left: 12px;
             }
         }
     }

@@ -1,0 +1,30 @@
+.button {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    height: 32px;
+    width: 136px;
+    padding: 4px 16px;
+    background-color: $background-color--submit;
+    border-radius: 16px;
+
+    
+
+    &__text {
+        position: relative;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: $background-color--body;
+        top: 1px;
+    }
+
+    &__text::after {
+        content: "";
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        background: url("../img/dropdown.svg") no-repeat;
+        margin-left: 12px;
+        top: 1px;
+    }
+}

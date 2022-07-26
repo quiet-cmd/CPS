@@ -61,15 +61,28 @@
                 display: flex;
                 margin-left: auto;
         
-                .titles__action {
+                .titles__repair,
+                .titles__checkstatus {
                     display: flex;
                     align-items: center;
                     margin-right: 60px;
-                    
-                    .titles__repair,
-                    .titles__checkstatus {
-                        margin-left: 16px;	
-                    }
+                }
+
+                .titles__repair::after,
+                .titles__checkstatus::after {
+                    content: "";
+                    display: block;
+                    min-width: 40px;
+                    min-height: 40px;
+                    margin-left: 16px;
+                }
+
+                .titles__repair::after {
+                    background: url("../img/ico/repair.svg") no-repeat;
+                }
+
+                .titles__checkstatus::after {
+                    background: url("../img/ico/checkstatus.svg") no-repeat;
                 }
             }
         }
